@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,9 +10,13 @@
 <body>
     
 <?php
+//Proyecto: Calculadora de Gastos
+//Autor: Dante
+//Tema: calculadora de gastos
+
+
 include_once('classes/Gasto.php');
 
-// Ruta del archivo JSON
 $archivo = 'data/gastos.json';
 
 // Cargar datos existentes
@@ -21,7 +26,7 @@ if (file_exists($archivo)) {
     $gastos = json_decode($contenido, true) ?? [];
 }
 
-// Mensaje de validación
+
 $mensaje = "";
 
 // Procesar formulario
@@ -78,5 +83,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 </body>
-
 
